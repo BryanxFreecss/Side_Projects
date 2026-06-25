@@ -2,4 +2,5 @@
 Projects I've made to help me understand coding and progress in the practice.
 
 ## Contents
-List of projects in this repository will go here as they're added.
+- [Calculator](Calculator) — a simple C++ calculator
+- [daily-task-app](daily-task-app) — a command-line daily task manager in C++
