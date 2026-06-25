@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Price Checker",
+  "version": "1.0.0",
+  "description": "Extracts the product you're viewing and opens price comparisons on other shopping sites.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "scripting"]
+}
