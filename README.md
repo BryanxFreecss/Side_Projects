@@ -6,4 +6,5 @@ Projects I've made to help me understand coding and progress in the practice.
 - [daily-task-app](daily-task-app) — a command-line daily task manager in C++
 - [Pong](Pong) — a console Pong game in C++ with easy/medium/hard AI difficulty
 - [price-checker-extension](price-checker-extension) — a Chrome extension that finds cheaper prices for the product you're viewing
+- [smart-mirror](smart-mirror) — a Raspberry Pi smart mirror with clock, weather, news, calendar, and motion-sensor screen control
 - [weather-app](weather-app) — a live weather app using your location and Open-Meteo

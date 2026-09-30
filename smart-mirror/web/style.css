@@ -1,0 +1,112 @@
+/* Pure black background so the two-way mirror only shows the text. */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  background: #000;
+  color: #fff;
+  font-family: "Roboto", "Helvetica Neue", "DejaVu Sans", Arial, sans-serif;
+  font-weight: 300;
+  overflow: hidden;
+  cursor: none;
+}
+
+.mirror {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "tl tr"
+    "mid mid"
+    "bot bot";
+  height: 100vh;
+  padding: 4vh 4vw;
+}
+
+.dim { color: #888; }
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #999;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+/* ---------- clock + calendar ---------- */
+.top-left { grid-area: tl; }
+
+.time {
+  font-size: 7rem;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.time .seconds { font-size: 2.5rem; color: #888; vertical-align: top; margin-left: 0.3rem; }
+.time .ampm    { font-size: 2rem;   color: #888; margin-left: 0.4rem; }
+
+.date { font-size: 1.8rem; color: #ccc; margin-top: 0.5rem; }
+
+.calendar { margin-top: 3rem; max-width: 26rem; }
+.calendar ul { list-style: none; }
+.calendar li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.25rem;
+  padding: 0.25rem 0;
+}
+.calendar .when { color: #888; white-space: nowrap; }
+.calendar .title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---------- weather ---------- */
+.top-right { grid-area: tr; text-align: right; }
+
+.weather-now { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; }
+.weather-icon { font-size: 4.5rem; }
+.weather-temp { font-size: 6rem; font-weight: 200; line-height: 1; }
+.weather-desc { font-size: 1.8rem; color: #ccc; margin-top: 0.3rem; }
+.weather-extra { font-size: 1.2rem; margin-top: 0.3rem; }
+
+.forecast { margin: 2rem 0 0 auto; border-collapse: collapse; font-size: 1.3rem; }
+.forecast td { padding: 0.3rem 0 0.3rem 1.4rem; }
+.forecast .day  { text-align: left; }
+.forecast .low  { color: #888; }
+/* Fade out later days so the eye lands on today. */
+.forecast tr:nth-child(4) { opacity: 0.7; }
+.forecast tr:nth-child(5) { opacity: 0.45; }
+
+/* ---------- greeting ---------- */
+.middle {
+  grid-area: mid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.greeting {
+  font-size: 3.2rem;
+  font-weight: 300;
+  text-align: center;
+  transition: opacity 1s;
+}
+
+/* ---------- news ---------- */
+.bottom { grid-area: bot; text-align: center; min-height: 5rem; }
+.news-source { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.15em; }
+.news-title {
+  font-size: 1.6rem;
+  margin-top: 0.4rem;
+  transition: opacity 0.8s;
+}
+
+.fade-out { opacity: 0; }
+
+/* Portrait monitors (common for mirrors) */
+@media (orientation: portrait) {
+  .time { font-size: 6rem; }
+  .weather-temp { font-size: 5rem; }
+  .greeting { font-size: 2.6rem; }
+}

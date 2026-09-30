@@ -1,0 +1,34 @@
+{
+  "name": "Bryan",
+  "location": {
+    "label": "Los Angeles",
+    "latitude": 34.0522,
+    "longitude": -118.2437
+  },
+  "units": "imperial",
+  "clock24h": false,
+  "news": {
+    "feeds": [
+      "https://feeds.bbci.co.uk/news/rss.xml",
+      "https://feeds.npr.org/1001/rss.xml"
+    ],
+    "maxItems": 12,
+    "rotateSeconds": 10
+  },
+  "calendar": {
+    "icsUrls": [],
+    "daysAhead": 7,
+    "maxEvents": 6
+  },
+  "compliments": {
+    "morning": ["Good morning!", "Rise and shine!", "Make today count."],
+    "afternoon": ["Looking sharp!", "Keep it up!", "You're doing great."],
+    "evening": ["Good evening!", "Time to relax.", "Nice work today."],
+    "night": ["Get some rest.", "Sleep well!", "See you tomorrow."]
+  },
+  "motionSensor": {
+    "enabled": false,
+    "gpioPin": 4,
+    "screenOffAfterSeconds": 300
+  }
+}

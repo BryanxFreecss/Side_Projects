@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Mirror</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="mirror">
+    <section class="top-left">
+      <div id="time" class="time">--:--</div>
+      <div id="date" class="date"></div>
+
+      <div class="module calendar">
+        <h2>Upcoming</h2>
+        <ul id="events"><li class="dim">Loading…</li></ul>
+      </div>
+    </section>
+
+    <section class="top-right">
+      <div class="weather-now">
+        <span id="weather-icon" class="weather-icon"></span>
+        <span id="weather-temp" class="weather-temp">--°</span>
+      </div>
+      <div id="weather-desc" class="weather-desc"></div>
+      <div id="weather-extra" class="weather-extra dim"></div>
+      <table id="forecast" class="forecast"></table>
+    </section>
+
+    <section class="middle">
+      <div id="greeting" class="greeting"></div>
+    </section>
+
+    <section class="bottom">
+      <div id="news-source" class="news-source dim"></div>
+      <div id="news-title" class="news-title"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
